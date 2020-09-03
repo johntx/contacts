@@ -1,16 +1,17 @@
 @extends('layouts.admin')
 @section('content')
 @include('alerts.request')
+
 <div class="panel">
 	<div class="panel-body">
-		{!! Form::model($user,['route' => ['user.update',$user->id],'method'=>'put']) !!}
-		@include('user.forms.form')
-		<div class="nb col-4">
-			<div class="col-2">
-				{!! Form::submit('Guardar',['class'=>'btn primary ancho bloquear_submit']) !!}
+		<form action="{{url('/user/'.$user->id)}}" method="post" accept-charset="utf-8">
+			{{ csrf_field() }}
+			{{ method_field('PATCH') }}
+			@include('user.forms.form')
+			<div class="col-2 nb">
+				{!! Form::submit('Update',['class'=>'btn primary col-4']) !!}
 			</div>
-		</div>
-		{!! Form::close() !!}
+		</form>
 	</div>
 </div>
 @endsection

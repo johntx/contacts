@@ -1,14 +1,17 @@
 @extends('layouts.admin')
 @section('content')
 @include('alerts.request')
+
 <div class="panel">
 	<div class="panel-body">
-		{!! Form::model($official,['route' => ['admin.official.update',$official->id],'method'=>'put']) !!}
-		@include('admin.official.forms.form')
-		<div class="col-2 nb">
-			{!! Form::submit('Guardar',['class'=>'btn primary col-4']) !!}
-		</div>
-		{!! Form::close() !!}
+		<form action="{{url('/admin/contacts/'.$contact->id)}}" method="post" accept-charset="utf-8">
+			{{ csrf_field() }}
+			{{ method_field('PATCH') }}
+			@include('admin.contacts.forms.form')
+			<div class="col-2 nb">
+				{!! Form::submit('Edit',['class'=>'btn primary col-4']) !!}
+			</div>
+		</form>
 	</div>
 </div>
 @endsection

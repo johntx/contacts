@@ -381,7 +381,7 @@ nav>.nav-user>p{
 	text-align: right;
 }
 nav>.nav-user>p:first-child{
-	font-size: 22px;
+	font-size: 22px !important;
 	font-weight: 400;
 	text-transform: uppercase;
 	height: 30px;

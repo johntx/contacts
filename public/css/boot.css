@@ -742,3 +742,8 @@ ul.tab-nav>li>a>h6{
 .mr{margin-right:20px; width:calc(100% - 20px);}.nr{margin-right:15px; width:calc(100% - 15px);}
 .mb{margin-bottom:20px; width:calc(100% - 20px);}.nb{margin-bottom:15px; width:calc(100% - 15px);}
 .ml{margin-left:20px; width:calc(100% - 20px);}.nl{margin-left:15px; width:calc(100% - 15px);}
+.forgot{
+	margin-top: 15px;
+	color: #000AD3 !important;
+	font-size: 14px;
+}

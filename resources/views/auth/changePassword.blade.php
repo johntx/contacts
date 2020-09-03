@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" type="image/png" href="{!!URL::to('icons/logomin.png')!!}" />
-	<title>Cambiar Contraseña</title>
+	<title>Change password</title>
 	{!!Html::style('css/boot.css')!!}
 	{!!Html::style('css/MentisMe.css')!!}
 </head>
@@ -18,20 +18,20 @@
 	<div class="col-1 col-mid" style="margin-top: 10%;">
 		<div class="panel default-soft">
 			<div class="panel-heading">
-				<h3 class="panel-title">Cambiar Contraseña</h3>
+				<h3 class="panel-title">Change password</h3>
 			</div>
 			<div class="panel-body">
 				{!!Form::open(['url'=>'pass/changePassword'])!!}
 				<div class="form-group">
-					{!!Form::password('passwordold',['class'=>'form-control', 'placeholder'=>'Contraseña Antigua', 'required', 'maxlength'=>60])!!}
+					{!!Form::password('passwordold',['class'=>'form-control', 'placeholder'=>'Old password', 'required', 'maxlength'=>60])!!}
 				</div>
 				<div class="form-group">
-					{!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Contraseña Nueva', 'required', 'maxlength'=>60])!!}
+					{!!Form::password('password',['class'=>'form-control', 'placeholder'=>'New Password', 'required', 'maxlength'=>60])!!}
 				</div>
 				<div class="form-group">
-					{!!Form::password('password_confirmation',['class'=>'form-control', 'placeholder'=>'Repetir Contraseña Nueva', 'required', 'maxlength'=>60])!!}
+					{!!Form::password('password_confirmation',['class'=>'form-control', 'placeholder'=>'Confirm Password', 'required', 'maxlength'=>60])!!}
 				</div>
-				{!!Form::submit('Cambiar contraseña',['class'=>'btn primary form-control shadow'])!!}
+				{!!Form::submit('Save',['class'=>'btn primary form-control shadow'])!!}
 				{!!Form::close()!!}
 			</div>
 		</div>
