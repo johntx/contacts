@@ -59,8 +59,8 @@
         <ul id="ul_est">
           @foreach (\App\Contacts::orderBy('id','DESC')->get() as $contact)
           <li>
-            <a href="{!!url('admin/contact/search/'.$contact->id)!!}" class="ver_est">&nbsp;&nbsp;&nbsp; {{$contact->fullname()}} - [{{$contact->contact_number}}] - ({{$contact->email}})</a>
-            <a href="{!!url('admin/contact/'.$contact->id.'/edit')!!}" class="edit_est">
+            <a href="{!!url('admin/contacts/'.$contact->id.'/edit')!!}" class="ver_est">&nbsp;&nbsp;&nbsp; {{$contact->fullname()}} - [{{$contact->contact_number}}] - ({{$contact->email}})</a>
+            <a href="{!!url('admin/contacts/'.$contact->id.'/edit')!!}" class="edit_est">
               <i class="mdi mdi-pencil"></i>
             </a>
           </li>

@@ -24,13 +24,13 @@
 						<td>{{$contact->email}}</td>
 						<td>{{$contact->contact_number}}</td>
 						<td>
-							<a href="{{url('/admin/contacts/'.$contact->id.'/edit')}}">Edit</a>
+							<a class="btn primary" href="{{url('/admin/contacts/'.$contact->id.'/edit')}}">Edit</a>
 						</td>
 						<td>
 							<form action="{{url('/admin/contacts/'.$contact->id)}}" method="post">
 								{{ csrf_field() }}
 								{{ method_field('DELETE') }}
-								<button type="submit" onclick="return confirm('Delete?');">Delete</button>
+								<button type="submit" class="btn-min danger" onclick="return confirm('Delete?');">Delete</button>
 							</form>
 						</td>
 					</tr>
